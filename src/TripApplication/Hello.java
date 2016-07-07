@@ -15,7 +15,7 @@ import javax.ws.rs.core.MediaType;
 // The browser requests per default the HTML MIME type.
 
 //Sets the path to base URL + /hello
-@Path("/hello")
+@Path("/")
 public class Hello {
 
   // This method is called if TEXT_PLAIN is request
@@ -39,5 +39,7 @@ public class Hello {
     return "<html> " + "<title>" + "Hello Jersey" + "</title>"
         + "<body><h1>" + "Hello Jersey" + "</body></h1>" + "</html> ";
   }
+  
+  public static void main(String[] args){}
 
 } 
