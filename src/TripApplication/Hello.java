@@ -1,9 +1,14 @@
 package TripApplication;
 
+import java.io.IOException;
+import java.util.List;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+
+import com.google.api.services.bigquery.model.TableCell;
 
 // Plain old Java Object it does not extend as class or implements 
 // an interface
@@ -16,30 +21,38 @@ import javax.ws.rs.core.MediaType;
 
 //Sets the path to base URL + /hello
 @Path("/")
-public class Hello {
+public class Hello {	
 
-  // This method is called if TEXT_PLAIN is request
-  @GET
-  @Produces(MediaType.TEXT_PLAIN)
-  public String sayPlainTextHello() {
-    return "Hello Jersey";
-  }
+//	// This method is called if TEXT_PLAIN is request
+//	@GET
+//	@Produces(MediaType.TEXT_PLAIN)
+//	public String sayPlainTextHello() throws IOException {
+//		Query query = new Query();
+//		return query.printResults();
+//	}
+//
+//	// This method is called if XML is request
+//	@GET
+//	@Produces(MediaType.TEXT_XML)
+//	public String sayXMLHello() throws IOException {
+//		Query query = new Query();
+//		return "<?xml version=\"1.0\"?>" + "<result> " + query.printResults() + "</result>";
+//	}
+//
+//	// This method is called if HTML is request
+//	@GET
+//	@Produces(MediaType.TEXT_HTML)
+//	public String sayHtmlHello() throws IOException {
+//		Query query = new Query();
+//		return "<html> " + "<title>" + "Query Result" + "</title>" + "<body>" + query.printResults() + "</body>"
+//				+ "</html> ";
+//	}
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<TableCell> sayJSONHello() throws IOException {
+		Query query = new Query();
+		return query.printResults();
+	}
 
-  // This method is called if XML is request
-  @GET
-  @Produces(MediaType.TEXT_XML)
-  public String sayXMLHello() {
-    return "<?xml version=\"1.0\"?>" + "<hello> Hello Jersey" + "</hello>";
-  }
-
-  // This method is called if HTML is request
-  @GET
-  @Produces(MediaType.TEXT_HTML)
-  public String sayHtmlHello() {
-    return "<html> " + "<title>" + "Hello Jersey" + "</title>"
-        + "<body><h1>" + "Hello Jersey" + "</body></h1>" + "</html> ";
-  }
-  
-  public static void main(String[] args){}
-
-} 
+}
