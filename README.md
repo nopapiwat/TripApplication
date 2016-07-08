@@ -9,7 +9,7 @@ Use Jersey and Maven in implement and Apache Tomcat version 8.0.35 to deploy.
 2. Install Apache Tomcat and config it for integrating with Eclipse web project.
 3. You can modify the source code in the constructor of Query.java to make it suitable for your project.
 4. Create Google Credential, and follow this instruction https://developers.google.com/identity/protocols/application-default-credentials 
-5 Run on Server by Eclipse. 
+5. Run on Server by Eclipse. 
 6. Or export project to .war file and put it to $TOMCAT/webapps directory. 
 7. <http://localhost:8080/TripApplication> will be accessible and return some data.
 
