@@ -19,7 +19,7 @@ Use Jersey and Maven in implement and Apache Tomcat version 8.0.35 to deploy.
 5. Or export project to **.war** file and put it to ***$TOMCAT_HOME/webapps*** directory. Then start Apache Tomcat.
 6. <http://localhost:8080/TripApplication> will be accessible and return some data on browser.
 
-##On Cloud Platform
+##On Cloud Platform ( Google Compute Engine )
 
 1. Create an instance of Google Compute Engine.
 2. Set the instance to allow protocol **tcp** with port **8080** and check **Allow HTTP Traffic** in Network Setting.
