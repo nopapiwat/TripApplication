@@ -19,4 +19,4 @@ Use Jersey and Maven in implement and Apache Tomcat version 8.0.35 to deploy.
 2. Install Apache Tomcat.
 3. Create Google Credential, and follow this instruction https://developers.google.com/identity/protocols/application-default-credentials
 4. Put .war file( export by Eclipse ) to $TOMCAT/webapps directory.
-5. Start Tomcat and <http://[Server ip]:8080/TripApplication> will be accessible and return some data.
+5. Start Tomcat and <http://[Server_ip]:8080/TripApplication> will be accessible and return some data.
